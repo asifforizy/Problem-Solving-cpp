@@ -1,25 +1,18 @@
 #include <iostream>
 using namespace std;
 
-void numberCrown(int n)
+void increasingNumber(int n)
 {
 
+    int number = 1;
     for (int i = 1; i <= n; i++)
     {
         for (int j = 1; j <= i; j++)
         {
-            cout << j;
+            cout << number ;
+            number +=1;
         }
 
-        for (int j = 1; j <= 2 * (n - i); j++)
-        {
-            cout << " ";
-        }
-
-        for (int j = i; j >= 1; j--)
-        {
-            cout << j;
-        }
         cout << endl;
     }
 }
@@ -33,6 +26,6 @@ int main()
     {
         int n;
         cin >> n;
-        numberCrown(n);
+        increasingNumber(n);
     }
 }
